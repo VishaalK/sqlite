@@ -1,0 +1,1 @@
+select third.*, SUM(CASE WHEN test.id IS NOT NULL THEN 1 ELSE 0 END) as count from third left outer join test on third.date = test.date group by third.date;
